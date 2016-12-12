@@ -122,7 +122,7 @@ function fromRandomAccessReader(reader, totalSize, options, callback) {
       var commentLength = eocdrBuffer.readUInt16LE(20);
       var expectedCommentLength = eocdrBuffer.length - eocdrWithoutCommentSize;
       if (commentLength !== expectedCommentLength) {
-        return callback(new Error("invalid comment length. expected: " + expectedCommentLength + ". found: " + commentLength));
+        //return callback(new Error("invalid comment length. expected: " + expectedCommentLength + ". found: " + commentLength));
       }
       // 22 - Comment
       // the encoding is always cp437.
